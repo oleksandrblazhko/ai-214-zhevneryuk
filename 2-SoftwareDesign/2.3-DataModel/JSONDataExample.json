@@ -1,0 +1,33 @@
+{
+  "user": {
+    "name": "Jane Smith",
+    "login": "jane_smith",
+    "password": "securepassword",
+    "date_birth": "1995-05-15"
+  },
+  "sleepQuality": {
+    "date": "2023-01-01",
+    "time_start": "2023-01-01T22:30:00",
+    "time_end": "2023-01-02T07:00:00",
+    "duration": 420,
+    "quality": "good"
+  },
+  "statistic": {
+    "period": "month",
+    "number_records": 10,
+    "average_duration": 450,
+    "average_start": "2023-01-01T22:00:00",
+    "average_end": "2023-01-02T07:30:00",
+    "average_quality": "normal"
+  },
+  "laborSafety": {
+    "rule": "Use safety equipment",
+    "standard": "ISO 12345",
+    "recommendation": "Regular safety training"
+  },
+  "dancesExercises": {
+    "name": "Zumba Dance",
+    "description": "High-energy dance workout",
+    "name_file": "zumba_dance.mp4"
+  }
+}
