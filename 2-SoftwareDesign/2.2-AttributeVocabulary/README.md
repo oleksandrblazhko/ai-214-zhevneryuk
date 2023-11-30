@@ -24,4 +24,3 @@
 | DancesExercises	 | name | Назва танцю/вправи	  | Текст |  |
 | DancesExercises	 | description	 | Опис танцю/вправи	  | Текст	 |  |
 | DancesExercises | name_file | Назва файлу	  | Текст |  |
-
