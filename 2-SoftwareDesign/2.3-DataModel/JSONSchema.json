@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "login": { "type": "string" },
+        "password": { "type": "string" },
+        "date_birth": { "type": "string", "format": "date" }
+      },
+      "required": ["name", "login", "password", "date_birth"]
+    },
+    "sleepQuality": {
+      "type": "object",
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "time_start": { "type": "string", "format": "date-time" },
+        "time_end": { "type": "string", "format": "date-time" },
+        "duration": { "type": "number" },
+        "quality": { "type": "string" }
+      },
+      "required": ["date", "time_start", "time_end", "duration", "quality"]
+    },
+    "statistic": {
+      "type": "object",
+      "properties": {
+        "period": { "type": "string" },
+        "number_records": { "type": "integer" },
+        "average_duration": { "type": "number" },
+        "average_start": { "type": "string", "format": "date-time" },
+        "average_end": { "type": "string", "format": "date-time" },
+        "average_quality": { "type": "string" }
+      },
+      "required": ["period", "number_records", "average_duration", "average_start", "average_end", "average_quality"]
+    },
+    "laborSafety": {
+      "type": "object",
+      "properties": {
+        "rule": { "type": "string" },
+        "standard": { "type": "string" },
+        "recommendation": { "type": "string" }
+      },
+      "required": ["rule", "standard", "recommendation"]
+    },
+    "dancesExercises": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "name_file": { "type": "string" }
+      },
+      "required": ["name", "description", "name_file"]
+    }
+  }
+}
