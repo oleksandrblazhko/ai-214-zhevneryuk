@@ -1,0 +1,25 @@
+@startuml
+hide circle
+title UML-діаграма концептуальних класів
+
+class User {
+  user_name: str
+  user_login: str
+  user_password: str
+  user_date_birth: date
+}
+
+class Consumer {
+}
+
+class SleepQuality {
+  sleep_date: date
+  sleep_time_start: date
+  sleep_time_end: date
+  sleep_duration: number
+  sleep_quality: string
+}
+
+Consumer "*"--|>"1" User
+Consumer "1" --> "*" SleepQuality : "can track sleep"
+@enduml
