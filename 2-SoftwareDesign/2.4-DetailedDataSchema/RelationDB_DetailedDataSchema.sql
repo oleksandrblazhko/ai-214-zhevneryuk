@@ -22,7 +22,7 @@ CREATE TABLE SleepQuality (
     sleep_duration NUMBER NOT NULL,
     sleep_quality VARCHAR2(255) NOT NULL,
     id_consumer INT,
-    FOREIGN KEY (id_consumer) REFERENCES Users_T(consumer_id)
+    FOREIGN KEY (id_consumer) REFERENCES Consumer_T(consumer_id)
 );
 
 
