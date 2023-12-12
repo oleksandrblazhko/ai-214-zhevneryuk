@@ -36,7 +36,7 @@ CREATE TABLE Quality (
 -- Statistic table
 CREATE TABLE Statistic (
     statistic_id INT PRIMARY KEY,
-    statistic_period VARCHAR2(255) NOT NULL,
+    statistic_period INTERVAL DAY TO SECOND NOT NULL,
     number_records NUMBER NOT NULL,
     average_duration NUMBER NOT NULL,
     average_start TIMESTAMP NOT NULL,
