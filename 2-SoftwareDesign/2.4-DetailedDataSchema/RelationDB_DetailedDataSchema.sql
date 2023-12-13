@@ -3,7 +3,7 @@ CREATE TABLE Users_T (
     user_id INT PRIMARY KEY,
     user_name VARCHAR(255) NOT NULL,
     user_login VARCHAR(255) UNIQUE NOT NULL,
-    user_password DATE NOT NULL,
+    user_password  VARCHAR(255) NOT NULL,
     user_date_birth DATE NOT NULL
 );
 
@@ -20,9 +20,10 @@ CREATE TABLE SleepQuality (
     sleep_time_start TIMESTAMP NOT NULL,
     sleep_time_end TIMESTAMP NOT NULL,
     sleep_duration NUMBER NOT NULL,
-    sleep_quality VARCHAR2(255) NOT NULL,
-    id_consumer INT,
-    FOREIGN KEY (id_consumer) REFERENCES Users_T(consumer_id)
+    id_quality INT NOT NULL,
+    FOREIGN KEY (id_quality) REFERENCES Quality(quality_id),
+    id_consumer INT  NOT NULL,
+    FOREIGN KEY (id_consumer) REFERENCES Consumer_T(consumer_id)
 );
 
 
@@ -35,7 +36,7 @@ CREATE TABLE Quality (
 -- Statistic table
 CREATE TABLE Statistic (
     statistic_id INT PRIMARY KEY,
-    statistic_period VARCHAR2(255) NOT NULL,
+    statistic_period INTERVAL DAY TO SECOND NOT NULL,
     number_records NUMBER NOT NULL,
     average_duration NUMBER NOT NULL,
     average_start TIMESTAMP NOT NULL,
